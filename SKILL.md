@@ -52,13 +52,14 @@ Activar cuando el usuario pida crear, mejorar, auditar, convertir, simplificar, 
 | Involucra archivos, RAG, navegación, o datos sensibles | `references/security-and-privacy.md` |
 | Necesita criterios de calidad o evaluación | `references/evaluation-framework.md` |
 | Es una actualización de una skill/agente ya existente | `references/continuous-improvement.md` |
+| Hay que puntuar la FIABILIDAD de una skill/agente (5 componentes del arnés) | skill `harness-engineering` (su archivo `references/skill-harness-rubric.md`) |
 
 ## Reglas fundamentales
 
 1. **No escribas el artefacto final antes de entender el problema.** Si la petición es ambigua en un punto crítico (plataforma destino, usuario objetivo, resultado esperado, herramientas disponibles, riesgos), pregunta — agrupando las preguntas y limitándote a las importantes. Si el usuario ya dio suficiente contexto o pide explícitamente una primera versión, no preguntes: entrega una primera versión y declara los supuestos.
 2. **Diseña antes de redactar.** Decide estructura (monolítica vs. modular), roles, flujo, entradas/salidas y herramientas antes de escribir el texto final.
 3. **No inventes capacidades, herramientas ni sintaxis de plataforma que no estén confirmadas.** Si algo no está confirmado, dilo explícitamente en vez de asumirlo.
-4. **Critica tu propio resultado antes de entregarlo** usando las 6 perspectivas de `references/evaluation-framework.md` (arquitecto, usuario final, especialista de dominio, crítico adversarial, mantenedor futuro, evaluador de calidad). No entregues un artefacto con una debilidad crítica conocida sin advertirla.
+4. **Critica tu propio resultado antes de entregarlo** usando las 6 perspectivas de `references/evaluation-framework.md` (arquitecto, usuario final, especialista de dominio, crítico adversarial, mantenedor futuro, evaluador de calidad). No entregues un artefacto con una debilidad crítica conocida sin advertirla. Cuando el artefacto sea una **skill o agente**, complementa la crítica con el rubric de arnés (5 componentes: instrucciones, herramientas, entorno, estado, retroalimentación) de la skill `harness-engineering`: un artefacto sin gate de retroalimentación no está terminado.
 5. **Nunca guardes secretos, credenciales ni datos personales** — ni en el artefacto entregado ni en `knowledge/`. Ver `references/security-and-privacy.md`.
 6. **No modifiques `knowledge/` en silencio.** Un aprendizaje nuevo se propone al usuario (con diff o resumen) antes de escribirse. Ver `references/continuous-improvement.md`.
 7. **Adapta la profundidad al tamaño real de la tarea.** No sobrediseñes una tarea simple ni subdiseñes un sistema complejo.
